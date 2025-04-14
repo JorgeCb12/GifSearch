@@ -1,38 +1,32 @@
 // Componente que muestra una cuadrícula de GIFs basada en una categoría
 // import { useState } from 'react';
-import { useEffect, useState } from 'react';
-import GifItem from './GifItem';
-import getGifs from '../helpers/getGifs'
+// import { useEffect, useState } from 'react';
+// import getGifs from '../helpers/getGifs'
+import useFetchGifs from '../hooks/useFetchGifs';
+import { GifItem } from './GifItem';
 
-const GitGrid = ({ category }) => {
-
-  const [images, setImages] = useState([])
-
-  const getImages = async () => {
-    const newImages = await getGifs(category)
-    setImages(newImages)
-  }
-  // Llamada a la función que obtiene los GIFs de la API
-  useEffect(() => {
-    getImages();
-
-  }, [])
+export const GitGrid = ({ category }) => {
+  const { images, isLoading } = useFetchGifs(category);
 
   return (
-    <>
-      <h3>{category.toUpperCase()}</h3>
-      <div className='card-grid'>
-        {images.map(( image , index) => (
-          <GifItem
-            key={image.d}
-            index={index}
-            {...image}
-             />
-
-        ))}
-      </div>
-    </>
-
-  )
+    <div className="category-container">
+      <h3 className="category-title">{category}</h3>
+      
+      {isLoading ? (
+        <div className="loading-container">
+          <div className="loading-spinner"></div>
+          <p>Cargando GIFs...</p>
+        </div>
+      ) : (
+        <div className="gif-grid">
+          {images.map(img => (
+            <GifItem 
+              key={img.id}
+              {...img}
+            />
+          ))}
+        </div>
+      )}
+    </div>
+  );
 }
-export default GitGrid
