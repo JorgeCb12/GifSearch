@@ -1,17 +1,33 @@
-<<<<<<< HEAD
-# React + Vite
+# 🎬 GIF Explorer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**GIF Explorer** es una aplicación web construida con **React** y **Vite**, que permite buscar y visualizar GIFs animados en tiempo real utilizando la **API de Giphy**.  
 
-Currently, two official plugins are available:
+Este proyecto fue desarrollado como práctica para aprender a consumir APIs, manejar estado con hooks y organizar componentes reutilizables en React.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🚀 Tecnologías utilizadas
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-=======
-# GifSearch
-GifSearch– Aplicación en React que consume la API de Giphy para buscar y mostrar GIFs en tiempo real.
->>>>>>> 0863d9f86c825f543acb7ab769189a70c1387906
+- ⚛️ React
+- ⚡ Vite
+- 🌐 Giphy API
+- 🎯 Hooks personalizados (Custom Hooks)
+- 💅 CSS personalizado con modo oscuro
+
+---
+
+## 🖼️ Funcionalidades
+
+- 🔍 Buscar GIFs por categorías
+- 💾 Evita categorías duplicadas
+- 🎞️ Muestra los resultados en una cuadrícula
+- 🚀 Carga dinámica de datos con `fetch` y `useEffect`
+- ⏳ Indicador de carga mientras se obtienen los GIFs
+
+---
+
+## 🛠️ Cómo ejecutar el proyecto
+
+1. Clona el repositorio:
+```bash
+git clone https://github.com/tu-usuario/gif-explorer.git
