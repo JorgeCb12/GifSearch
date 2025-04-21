@@ -399,6 +399,46 @@ body {
   }
 }
 
+@media (max-width: 440px) {
+  .gif-card {
+    width: 200px;
+    height: auto;
+    min-height: 220px;
+  }
+
+  .gif-image-container {
+    height: 220px;
+    padding-top: 0;
+  }
+
+  .gif-image {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .gif-grid {
+    padding: 0.5rem;
+    gap: 1rem;
+  }
+
+  .app-container {
+    padding: 0.5rem;
+  }
+
+  .app-header {
+    padding-bottom: 0.5rem;
+  }
+
+  .app-title {
+    font-size: 1.3rem;
+  }
+
+  .app-subtitle {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.6rem;
+  }
+}
+
 .modal-overlay {
   position: fixed;
   top: 0;
